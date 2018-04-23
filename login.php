@@ -11,7 +11,10 @@ if(isset($_POST['loginname'])) {
 
 require 'inc/head.php';
 require 'cookies.php';
-
+if (isset($_SESSION['loginname']))
+{
+    header('Location:index.php');
+}
 
 ?>
 <div class="container" style="margin-top:40px">
